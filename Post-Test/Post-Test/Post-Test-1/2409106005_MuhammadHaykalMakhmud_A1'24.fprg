@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="PostTest"/>
+        <attribute name="authors" value="oru"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-09-08 06:33:52 PM"/>
+        <attribute name="created" value="b3J1O0xBUFRPUC1SMDFLQUE4SDsyMDI0LTA5LTA3OzExOjQwOjI0IFBNOzI2NDM="/>
+        <attribute name="edited" value="b3J1O0xBUFRPUC1SMDFLQUE4SDsyMDI0LTA5LTA4OzA2OjMzOjUyIFBNOzEwOzI4MDc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="TotalHarga, BanyakPengunjung, Harga, i, j" type="Integer" array="False" size=""/>
+            <assign variable="TotalHarga" expression="0"/>
+            <declare name="UmurSama" type="Boolean" array="False" size=""/>
+            <assign variable="UmurSama" expression="False"/>
+            <output expression="&quot;Masukkan banyak pengunjung: &quot;" newline="True"/>
+            <input variable="BanyakPengunjung"/>
+            <if expression="BanyakPengunjung &gt;= 3">
+                <then>
+                    <declare name="ListUmur" type="Integer" array="True" size="BanyakPengunjung"/>
+                    <for variable="i" start="0" end="BanyakPengunjung-1" direction="inc" step="1">
+                        <assign variable="Harga" expression="60000"/>
+                        <output expression="&quot;Masukkan umur orang ke &quot; &amp; i+1" newline="True"/>
+                        <input variable="ListUmur[i]"/>
+                        <for variable="j" start="i" end="0" direction="dec" step="1">
+                            <if expression="j != 0">
+                                <then>
+                                    <if expression="ListUmur[i] = ListUmur[j-1]">
+                                        <then>
+                                            <assign variable="UmurSama" expression="True"/>
+                                        </then>
+                                        <else/>
+                                    </if>
+                                </then>
+                                <else/>
+                            </if>
+                        </for>
+                        <if expression="UmurSama">
+                            <then>
+                                <assign variable="i" expression="BanyakPengunjung-1"/>
+                            </then>
+                            <else>
+                                <if expression="ListUmur[i] &lt; 18">
+                                    <then>
+                                        <assign variable="Harga" expression="Harga * (100/100 - 20/100)"/>
+                                        <output expression="&quot;Orang ke &quot; &amp; i+1 &amp; &quot; Mendapatkan diskon 20%, harga setelah diskon menjadi: &quot; &amp; Harga" newline="True"/>
+                                        <assign variable="TotalHarga" expression="TotalHarga + Harga"/>
+                                    </then>
+                                    <else>
+                                        <if expression="ListUmur[i] &gt; 25">
+                                            <then>
+                                                <assign variable="Harga" expression="Harga * (100/100 - 10/100)"/>
+                                                <output expression="&quot;Orang ke &quot; &amp; i+1 &amp; &quot; Mendapatkan diskon 10%, harga setelah diskon menjadi: &quot; &amp; Harga" newline="True"/>
+                                                <assign variable="TotalHarga" expression="TotalHarga + Harga"/>
+                                            </then>
+                                            <else>
+                                                <assign variable="Harga" expression="Harga * (100/100 - 15/100)"/>
+                                                <output expression="&quot;Orang ke &quot; &amp; i+1 &amp; &quot; Mendapatkan diskon 15%, harga setelah diskon menjadi: &quot; &amp; Harga" newline="True"/>
+                                                <assign variable="TotalHarga" expression="TotalHarga + Harga"/>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </for>
+                </then>
+                <else>
+                    <assign variable="Harga" expression="60000"/>
+                    <output expression="&quot;Harga tiket tidak mendapatkan diskon&quot;" newline="True"/>
+                    <assign variable="TotalHarga" expression="Harga*BanyakPengunjung"/>
+                </else>
+            </if>
+            <if expression="UmurSama">
+                <then>
+                    <output expression="&quot;Maaf Umur Tidak Boleh Sama&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Total Harga nya: &quot; &amp; TotalHarga" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
