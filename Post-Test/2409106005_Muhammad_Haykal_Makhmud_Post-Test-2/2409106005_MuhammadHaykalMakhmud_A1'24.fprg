@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="2409106005_MuhammadHaykalMakhmud_A1'24"/>
+        <attribute name="authors" value="oru"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-09-14 09:54:36 PM"/>
+        <attribute name="created" value="b3J1O0xBUFRPUC1SMDFLQUE4SDsyMDI0LTA5LTE0OzA4OjU1OjQxIFBNOzI2NTI="/>
+        <attribute name="edited" value="b3J1O0xBUFRPUC1SMDFLQUE4SDsyMDI0LTA5LTE0OzA5OjU0OjM2IFBNOzE7Mjc2NA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="NIM, Umur, TigaDigitTerakhirNIM, ModulusNIM" type="Integer" array="False" size=""/>
+            <declare name="TinggiBadan" type="Real" array="False" size=""/>
+            <declare name="NamaLengkap, NamaPanggilan, Prodi" type="String" array="False" size=""/>
+            <output expression="&quot;Masukkan Nama Lengkap: &quot;" newline="True"/>
+            <input variable="NamaLengkap"/>
+            <output expression="&quot;Masukkan Nama Panggilan: &quot;" newline="True"/>
+            <input variable="NamaPanggilan"/>
+            <output expression="&quot;Masukkan NIM: &quot;" newline="True"/>
+            <input variable="NIM"/>
+            <output expression="&quot;Masukkan Program Studi: &quot;" newline="True"/>
+            <input variable="Prodi"/>
+            <output expression="&quot;Masukkan Umur: &quot;" newline="True"/>
+            <input variable="Umur"/>
+            <output expression="&quot;Masukkan Tinggi Badan (meter),contoh: 1.75: &quot;" newline="True"/>
+            <input variable="TinggiBadan"/>
+            <assign variable="TigaDigitTerakhirNIM" expression="NIM % 1000"/>
+            <assign variable="ModulusNIM" expression="TigaDigitTerakhirNIM % 6"/>
+            <output expression="&quot;Perkenalkan nama saya &quot; &amp; NamaLengkap &amp; &quot;, biasa dipanggil &quot; &amp; NamaPanggilan &amp; &quot;, NIM saya &quot; &amp; NIM" newline="True"/>
+            <output expression="&quot;Program Studi saya &quot; &amp; Prodi &amp; &quot;, umur saya &quot; &amp; Umur &amp; &quot; tahun, tinggi badan saya &quot; &amp; TinggiBadan &amp; &quot; meter&quot;" newline="True"/>
+            <output expression="&quot;dan hasil modulus 6 dari 3 angka terakhir NIM saya adalah &quot; &amp; ModulusNIM" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
