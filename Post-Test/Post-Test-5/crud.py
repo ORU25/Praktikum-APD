@@ -47,11 +47,20 @@ while True:
                               if pilihMenu == '1':
                                     print("Register User")
                                     usernameUser = input("Masukkan username user: ")
-                                    passwordUser = input("Masukkan password user: ")
+                                    usernameDitemukan = False
+                                    for user in range(len(listAccount)):
+                                          if usernameUser == listAccount[user][0]:
+                                                usernameDitemukan = True
+                                                print("Username sudah ada. Tidak bisa menginput username yang sama")
+                                                break
 
-                                    listAccount.append([usernameUser, passwordUser])
-                                    
-                                    print("User Berhasil Diregisterasi")
+                                    if usernameDitemukan == False:
+                                          passwordUser = input("Masukkan password user: ")
+
+                                          listAccount.append([usernameUser, passwordUser])
+                                          
+                                          print("User Berhasil Diregisterasi")
+                                          # print(listAccount)
                               
                               # Manage Kamar
                               elif pilihMenu == '2':
@@ -72,11 +81,19 @@ while True:
                                           # Tambah Kamar
                                           if pilihMenu == '1':
                                                 nomorkamar = input("Masukkan nomor kamar: ")
-                                                statuskamar = input("Masukkan status kamar: ")
+                                                kamarDitemukan = False
 
-                                                listKamar.append([nomorkamar,statuskamar])
+                                                for kamar in range(len(listKamar)):
+                                                      if listKamar[kamar][0] == nomorkamar:
+                                                            kamarDitemukan = True
+                                                            print("Kamar sudah ada. Tidak bisa menambahkan kamar yang sama")
+                                                            break
+                                                if kamarDitemukan == False:
+                                                      statuskamar = input("Masukkan status kamar: ")
 
-                                                print("Kamar Berhasil Ditambahkan")
+                                                      listKamar.append([nomorkamar,statuskamar])
+
+                                                      print("Kamar Berhasil Ditambahkan")
 
                                           # Lihat Kamar
                                           elif pilihMenu == '2':
@@ -97,24 +114,27 @@ while True:
                                                 print("===============================")
 
                                                 kamarLama = input("Masukkan kode kamar yang ingin diubah: ")
+                                                kamarDitemukan = False
                                                 for kamar in range(len(listKamar)):
-                                                      kamarDitemukan = False
 
                                                       if listKamar[kamar][0] == kamarLama:
                                                             kamarDitemukan = True
                                                             kodeSudahAda = False
                                                             kodeBaru = input("Masukkan kode kamar baru: ")
+
                                                             for kode in listKamar:
                                                                   if kode[0] == kodeBaru:
                                                                         kodeSudahAda = True
                                                                         print("Kode kamar sudah ada. Tidak bisa mengubah ke kode yang sama.")
-                                                                  break
+                                                                        break
+
                                                             if kodeSudahAda == False:
                                                                   statusBaru = input("Masukkan status kamar baru: ")
                                                                   listKamar[kamar][0] = kodeBaru
                                                                   listKamar[kamar][1] = statusBaru
                                                                   print("Kamar Berhasil Diubah")
-                                                      break
+                                                            break
+
                                                 if kamarDitemukan == False:
                                                       print("Kamar tidak ditemukan")     
                                                             
