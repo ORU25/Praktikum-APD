@@ -153,7 +153,7 @@ while True:
                               print("================================")
                               print("| Pilih menu :                 |")
                               print("| 1. pesan Kamar               |")
-                              print("| 3. logout                    |")
+                              print("| 2. logout                    |")
                               print("================================")
 
                               pilihMenu = input("Masukkan pilihan anda: ")
