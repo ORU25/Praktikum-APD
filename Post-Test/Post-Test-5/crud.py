@@ -179,7 +179,9 @@ while True:
                               pilihMenu = input("Masukkan pilihan anda: ")
                               
                               # Pesan Kamar
-                              if pilihMenu == '1':    
+                              if pilihMenu == '1':  
+                                    kamarTersedia = False
+
                                     print("\n================================")
                                     print("| List Kamar Tersedia         |")
                                     print("===============================")
@@ -187,22 +189,27 @@ while True:
                                     print("===============================")
                                     for kamar in listKamar:
                                           if kamar[1] == 'tersedia':
+                                                kamarTersedia = True
                                                 print(f"| {kamar[0]:<12} | {kamar[1]:<12} |")
+                                    if kamarTersedia == False:
+                                          print("| Tidak ada kamar tersedia    |")
                                     print("===============================")
 
-                                    nomorkamar = input("Masukkan nomor kamar yang ingin anda pesan: ")
-                                    kamarDitemukan = False
-                                    for kamar in range(len(listKamar)):
-                                          if listKamar[kamar][0] == nomorkamar:
-                                                kamarDitemukan = True
-                                                if listKamar[kamar][1] == 'tersedia':
-                                                      listKamar[kamar][1] = 'terpakai'
-                                                      print("Kamar Berhasil Diambil")
-                                                      break
-                                                else:
-                                                      print("Kamar tersebut sedang terpakai")
-                                    if kamarDitemukan == False:
-                                          print("Kamar tidak ditemukan")
+                                    if kamarTersedia == True:
+                                          nomorkamar = input("Masukkan nomor kamar yang ingin anda pesan: ")
+                                          kamarDitemukan = False
+                                          for kamar in range(len(listKamar)):
+                                                if listKamar[kamar][0] == nomorkamar:
+                                                      kamarDitemukan = True
+                                                      if listKamar[kamar][1] == 'tersedia':
+                                                            listKamar[kamar][1] = 'terpakai'
+                                                            print("Kamar Berhasil Diambil")
+                                                            break
+                                                      else:
+                                                            print("Kamar tersebut sedang terpakai")
+                                          if kamarDitemukan == False:
+                                                print("Kamar tidak ditemukan")
+                               
 
                               elif pilihMenu == '2':
                                     break
