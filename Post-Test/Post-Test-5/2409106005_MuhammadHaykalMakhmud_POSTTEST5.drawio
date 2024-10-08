@@ -38,10 +38,10 @@
         <mxCell id="CTmQaMRfLMgIivIih5rs-17" value="No" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="325" y="210" width="40" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="CTmQaMRfLMgIivIih5rs-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="CTmQaMRfLMgIivIih5rs-18" target="CTmQaMRfLMgIivIih5rs-13" edge="1">
+        <mxCell id="KmB1iOixg5gTxzGHTbVY-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="CTmQaMRfLMgIivIih5rs-18" target="Szz_0jvh1cqQydP9ENVo-7">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="250" y="130" />
+              <mxPoint x="243" y="33" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -289,13 +289,13 @@
         <mxCell id="Szz_0jvh1cqQydP9ENVo-35" value="Input nomor kamar" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;dashed=0;strokeColor=default;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=default;" parent="1" vertex="1">
           <mxGeometry x="182.5" y="1277" width="142.5" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="ys0p1O7EgWVjhq2hk7gU-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="CTmQaMRfLMgIivIih5rs-42" target="ys0p1O7EgWVjhq2hk7gU-1">
+        <mxCell id="ys0p1O7EgWVjhq2hk7gU-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="CTmQaMRfLMgIivIih5rs-42" target="ys0p1O7EgWVjhq2hk7gU-1" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="107" y="713" as="sourcePoint" />
             <mxPoint x="107" y="902" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ys0p1O7EgWVjhq2hk7gU-1" value="Input Pilihan" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;dashed=0;strokeColor=default;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=default;" vertex="1" parent="1">
+        <mxCell id="ys0p1O7EgWVjhq2hk7gU-1" value="Input Pilihan" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;dashed=0;strokeColor=default;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=default;" parent="1" vertex="1">
           <mxGeometry x="35.75" y="763" width="142.5" height="50" as="geometry" />
         </mxCell>
       </root>
