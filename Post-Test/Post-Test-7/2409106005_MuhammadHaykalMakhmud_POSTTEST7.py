@@ -67,7 +67,7 @@ def readKamar():
     print("| Kode Kamar   | Status Kamar |")
     print("===============================")
     for kamar in listKamar:
-        print(f"| {kamar["nomor"]:<12} | {kamar["status"]:<12} |")
+        print(f"| {kamar['nomor']:<12} | {kamar['status']:<12} |")
     print("===============================")
 
 def cariKamar(listKamar, nomorKamar, index=0):
